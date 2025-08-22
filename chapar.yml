@@ -1,0 +1,12 @@
+address: 0.0.0.0
+port: 10200
+prefork: true
+token: "cluster-shared-token"
+
+tls:
+  enabled: true
+  certFile: "/etc/apadana/certs/chapar/cert.pem"
+  keyFile: "/etc/apadana/certs/chapar/key.pem"
+
+etcd:
+  - "127.0.0.1:2379"

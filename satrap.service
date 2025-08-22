@@ -1,0 +1,16 @@
+[Unit]
+Description=Satrap
+After=network.target
+StartLimitIntervalSec=30s
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+TimeoutStartSec=5s
+
+ExecStart=/usr/bin/satrap -config /etc/apadana/satrap/satrap.yml
+
+[Install]
+WantedBy=multi-user.target

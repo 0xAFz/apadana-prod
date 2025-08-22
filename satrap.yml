@@ -1,0 +1,23 @@
+address: 127.0.0.1
+port: 10100
+prefork: true
+token: "satrap-shared-token"
+nodeID: "satrap-id"
+
+tls:
+  enabled: false
+  certFile: "/etc/apadana/certs/satrap/cert.pem"
+  keyFile: "/etc/apadana/certs/satrap/key.pem"
+
+xray:
+  address: 127.0.0.1
+  port: 8080
+
+cluster:
+  enabled: true
+  server: "http://127.0.0.1:10200"
+  token: "cluster-shared-token"
+
+syncFrequency: 1m
+nodeStatusUpdateFrequency: 10s
+maxInbounds: 110

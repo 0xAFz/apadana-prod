@@ -1,0 +1,5 @@
+etcd:
+  - "127.0.0.1:2379"
+
+nodeMonitorPeriod: 5s
+nodeMonitorGracePeriod: 20s

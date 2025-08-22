@@ -1,0 +1,16 @@
+[Unit]
+Description=Etcd
+After=network.target
+StartLimitIntervalSec=30s
+StartLimitBurst=5
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=5s
+TimeoutStartSec=5s
+
+ExecStart=/usr/bin/etcd --name local --data-dir /var/lib/etcd --listen-client-urls http://127.0.0.1:2379 --advertise-client-urls http://127.0.0.1:2379
+
+[Install]
+WantedBy=multi-user.target
