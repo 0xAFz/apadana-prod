@@ -7,8 +7,4 @@ cp ./chapar.service /etc/systemd/system/chapar.service
 cp ./satrap.service /etc/systemd/system/satrap.service
 cp ./spasaka.service /etc/systemd/system/spasaka.service
 
-cp ./chapar.yml /etc/apadana/chapar/chapar.yml
-cp ./spasaka.yml /etc/apadana/spasaka/spasaka.yml
-cp ./satrap.yml /etc/apadana/satrap/satrap.yml
-
 systemctl daemon-reload
